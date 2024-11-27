@@ -1,0 +1,60 @@
+<div class="dashboard">
+  <nav class="navbar">
+    <div class="logo-container">
+      <h3>Inua Mkulima Subsidy Program</h3>
+    </div>
+    <div class="links-container">
+      <a>Logged In As:</a>
+      <a>Peter</a>
+      <a>Logout</a>
+    </div>
+  </nav>
+  <div class="dashboard-content">
+    <div class="sidebar">
+      <nav class="sidebar-links">
+        <a class="link activeLink">Dashboard</a>
+        <a class="link">Transactions</a>
+        <a class="link">Reports</a>
+      </nav>
+    </div>
+    <div class="main">
+      <h2 class="page-title">Product Details</h2>
+      <div class="breadcrumb">
+        <button class="back-btn">Back</button>
+        <p class="text">Product Details</p>
+      </div>
+      <div>
+        <p><b>Inua mkulima wallet</b> balance: <b>Kes 2,400.00</b></p>
+      </div>
+
+      <div class="products-container">
+        <div class="product-list-container">
+            <h3 class="title">Products</h3>
+            <div>
+
+            </div>
+            <div class="list">
+                <div class="products" *ngFor="let product of (products$ | async)">
+                    <div class="item">
+                        <p>{{product.title}}</p>
+                    </div>
+                    <div class="item">
+                        <p>{{product.price}}</p>
+                    </div>
+                    <div class="item">
+                        <mat-icon aria-hidden="false" fontIcon="add_circle"></mat-icon>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div>
+            <h3>Selected Products</h3>
+            <div>
+                <p>Please select a products from the products panel first</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

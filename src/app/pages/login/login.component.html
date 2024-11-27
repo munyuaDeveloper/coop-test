@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="login-container">
+    <div class="banner">
+      <img class="logo" src="/assets/logo/logo.png" />
+    </div>
+    <div class="form" [formGroup]="form">
+      <div class="card">
+        <div class="card-content">
+          <p class="welcom-ms">WELCOME TO</p>
+          <h2 class="title">Inua Mkulima - Subsidy Program</h2>
+        
+          <ng-container
+           *ngIf="continueAction === 'username'">
+            <p class="">Enter your username to continue</p>
+            <div class="input-container">
+              <p class="label">Username</p>
+              <input class="usernameInput" formControlName="username" />
+            </div>
+
+            <button class="continue-btn" (click)="handleContinue()">Continue<mat-icon aria-hidden="false" class="icon" fontIcon="arrow_forward_ios"></mat-icon></button>
+          </ng-container>
+
+          <ng-container *ngIf="continueAction === 'password'">
+            <p class="">Enter your password to continue</p>
+            <div class="input-container">
+              <p class="label">Password</p>
+              <input class="usernameInput" formControlName="password" />
+            </div>
+
+            <button class="continue-btn" (click)="signIn()">Sign In <mat-icon aria-hidden="false" class="icon" fontIcon="arrow_forward_ios"></mat-icon></button>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
